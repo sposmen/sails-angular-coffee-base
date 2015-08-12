@@ -1,0 +1,49 @@
+<h1>Coworkers</h1>
+<div ng-controller="CoworkersCtrl" ng-init="list()" class="row">
+  <div class="col-md-6">
+    <div>
+      <a ui-sref="coworkersNew()" class="btn btn-primary">New</a>
+    </div>
+    <br />
+    <table class="table table-striped">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Car</th>
+        <th>Actions</th>
+      </tr>
+      <tr ng-mouseover="startBounce(0)" ng-mouseleave="stopBounce(0)">
+        <th colspan="4" class="text-center">Office</th>
+      </tr>
+      <tr ng-repeat="model in models" ng-mouseover="startBounce(model)" ng-mouseleave="stopBounce(model)"
+          tooltip="Morning: {{model.morning | date: 'shortTime'}} - Evening: {{model.evening | date: 'shortTime'}}" tooltip-popup-delay="500">
+        <td ng-bind="$index + 1"></td>
+        <td>
+          <a href="#" ui-sref="coworkersShow({id: model.id})" ng-bind="model.name"></a>
+        </td>
+        <td ng-bind="model.email"></td>
+        <td class="text-center"><span class="glyphicon" ng-class="{'glyphicon-ok': model.haveCar}" aria-hidden="true"></span></td>
+        <td class="text-center">
+          <a ui-sref="coworkersEdit({id: model.id})"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+          <!--<a ng-click="delete(model.id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>-->
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <map id="listMap" center="6.236124983039287, -75.57615280151367" zoom="12" style="height: 500px">
+      <marker animation="DROP" position="{{ office.latitude + ',' +  office.longitude }}" title="OFFICE" icon="//developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"></marker>
+      <marker ng-repeat="model in models" animation="DROP" position="{{ model.latitude + ',' +  model.longitude }}" title="{{model.name}}"></marker>
+      <directions
+        ng-if="route"
+        draggable="true"
+        travel-mode="DRIVING"
+        origin="{{ route }}"
+        destination="{{ office.latitude + ',' +  office.longitude }}">
+      </directions>
+    </map>
+    <br />
+  </div>
+
+</div>

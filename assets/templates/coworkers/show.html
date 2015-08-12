@@ -1,0 +1,51 @@
+<div ng-controller="CoworkersCtrl" ng-init="show()">
+  <div ng-if="getModelError">
+    Error.
+  </div>
+  <div ng-if="!getModelError" class="row">
+    <h1>Coworker Detail: {{model.name}}</h1>
+    <div class="col-md-5">
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <td ng-bind="model.id"></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td ng-bind="model.email"></td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td ng-bind="model.name"></td>
+        </tr>
+        <tr>
+          <th>Have Car</th>
+          <td><span class="glyphicon" ng-class="{'glyphicon-ok': model.haveCar}" aria-hidden="true"></span></td>
+        </tr>
+        <tr>
+          <th>Work from home</th>
+          <td>{{ wfhDays[model.wfh].label }}</td>
+        </tr>
+        <tr>
+          <th>Morning Time</th>
+          <td>{{model.morning | date:'shortTime'}}</td>
+        </tr>
+        <tr>
+          <th>Evening Time</th>
+          <td>{{model.evening | date:'shortTime'}}</td>
+        </tr>
+      </table>
+
+      <div>
+        <a ui-sref="coworkersEdit({id: model.id})" class="btn btn-primary">Edit</a>
+        <a ui-sref="coworkers()" class="btn btn-default">View All</a>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <map center="6.236124983039287, -75.57615280151367" zoom="12" style="height: 500px">
+        <marker position="{{ model.latitude + ',' +  model.longitude }}" title="Set position"></marker>
+      </map>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input ng-model="model.name" type="text" class="form-control" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input ng-model="model.email" type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="model.haveCar"> Have Car
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="wfh">Work From Home</label>
+      <select ng-model="model.wfh" type="email" class="form-control" id="wfh" ng-options="item.id as item.label for item in wfhDays"></select>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="morning">Morning Time</label>
+          <timepicker id="morning" ng-model="model.morning"></timepicker>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="evening">Evening Time</label>
+          <timepicker id="evening" ng-model="model.evening"></timepicker>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a ng-if="edition" ui-sref="coworkersShow({id: model.id})" class="btn btn-default">Cancel</a>
+    <a ng-if="!edition" ui-sref="coworkers()" class="btn btn-default">Cancel</a>
+  </div>
+  <div class="col-md-8">
+    Please select your home location by clicking on the map...
+    <map center="6.236124983039287, -75.57615280151367" zoom="12" on-click="setPosition()" style="height: 500px">
+      <marker position="{{ model.latitude + ',' +  model.longitude }}" title="Set position">
+      </marker>
+    </map>
+  </div>
+</div>
