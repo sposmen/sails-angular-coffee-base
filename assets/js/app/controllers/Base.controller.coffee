@@ -1,4 +1,4 @@
-class BasicModelController
+class BaseController
   constructor: (@$scope, @$sails, @$state, @$stateParams)->
     throw Error('modelName must be specified') unless @modelName
     @$scope.models = []

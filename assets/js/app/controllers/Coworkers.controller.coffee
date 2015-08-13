@@ -1,4 +1,4 @@
-class CoworkersController extends BasicModelController
+class CoworkersController extends BaseController
   constructor: (@$scope, @$sails, @$state, @$stateParams, @$rootScope)->
 
     @modelName = 'coworkers'
