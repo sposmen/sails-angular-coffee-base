@@ -4,6 +4,7 @@ app = angular.module('sampleApp', [
   'sampleApp.controllers'
   'ui.router'
   'ui.bootstrap'
+  'ui.tinymce'
   'ngSails'
   'ngMap'
 ]);
@@ -20,7 +21,7 @@ app.config ($stateProvider, $urlRouterProvider, $locationProvider) ->
     url: '/'
     templateUrl: 'templates/home/index.html'
 
-  for route in ['coworkers']
+  for route in ['coworkers', 'blog']
     $stateProvider.state route,
       url: "/#{route}"
       templateUrl: "templates/#{route}/list.html"

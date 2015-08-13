@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input ng-model="model.title" type="text" class="form-control" id="title" placeholder="Enter the title">
+    </div>
+    <div class="form-group">
+      <label for="title">Content</label>
+      <textarea ui-tinymce="{trusted: true}"
+                ng-model="model.content"
+                ng-change="demo.updateHtml()" id="content"></textarea>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a ng-if="edition" ui-sref="blogShow({id: model.id})" class="btn btn-default">Cancel</a>
+    <a ng-if="!edition" ui-sref="blog()" class="btn btn-default">Cancel</a>
+  </div>
+
+</div>

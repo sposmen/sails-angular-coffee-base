@@ -1,0 +1,6 @@
+<div ng-controller="BlogCtrl">
+  <h1>Edit Blog: {{ model.title }}</h1>
+  <form ng-init="edit()" ng-submit="update()">
+    <div ng-include="'templates/blog/_edit.html'"></div>
+  </form>
+</div>
