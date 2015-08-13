@@ -1,4 +1,4 @@
-# Coworkers
+# Coworkers (SailsJS - AngularJS - Coffescript Based)
 
 ## Setup
 
