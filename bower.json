@@ -1,0 +1,28 @@
+{
+  "name": "sails_angular_coffee",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sposmen/sails-angular-coffee-base",
+  "authors": [
+    "Jaime Giraldo <sposmen@gmail.com>"
+  ],
+  "description": "JS Dependencies managed by Bower",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/js/**/*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "ngmap": "~1.10.1",
+    "angular-ui-tinymce": "~0.0.9",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.3",
+    "angular-sails": "~1.1.4"
+  }
+}

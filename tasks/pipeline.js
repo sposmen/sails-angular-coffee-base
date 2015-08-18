@@ -26,20 +26,26 @@ var jsFilesToInject = [
 
   'js/app/services/Constants.js',
   // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
+  'js/dependencies/sails.io.js/dist/sails.io.js',
 
 
   // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/jquery-2.1.3.js',
-  'js/dependencies/angular.js',
-  'js/dependencies/**/*.js',
+  'js/dependencies/jquery/dist/jquery.js',
+  'js/dependencies/angular/angular.js',
+  'js/dependencies/angular-ui-router/release/angular-ui-router.js',
+  'js/dependencies/angular-sails/dist/angular-sails.js',
+  'js/dependencies/ngmap/build/scripts/ng-map.js',
+  'js/dependencies/angular-bootstrap/ui-bootstrap-tpls.js',
+
+  'js/dependencies/tinymce-dist/tinymce.min.js',
+  'js/dependencies/angular-ui-tinymce/src/tinymce.js',
+
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/controllers/app.js',
   'js/**/models/*.js',
-  'js/**/controllers/*.js',
-  'js/**/*.js'
+  'js/**/controllers/*.js'
 ];
 
 
