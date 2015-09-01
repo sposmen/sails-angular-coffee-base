@@ -36,7 +36,7 @@ module.exports = function(grunt) {
           'angular-ui-tinymce/src/tinymce.js',
 
           'tinymce-dist/tinymce.min.js',
-          'tinymce-dist/themes/*',
+          'tinymce-dist/themes/**/*',
           'tinymce-dist/skins/**/*',
           'tinymce-dist/plugins/**/*',
 
