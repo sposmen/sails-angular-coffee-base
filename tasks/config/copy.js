@@ -22,8 +22,43 @@ module.exports = function(grunt) {
 				cwd: './assets',
 				src: ['**/*.!(coffee|less)'],
 				dest: '.tmp/public'
-			}]
+			},{
+        expand: true,
+        cwd: 'bower_components',
+        src: [
+          'sails.io.js/dist/sails.io.js',
+          'jquery/dist/jquery.min.js',
+          'angular/angular.min.js',
+          'angular-ui-router/release/angular-ui-router.min.js',
+          'angular-sails/dist/angular-sails.min.js',
+          'ngmap/build/scripts/ng-map.min.js',
+          'angular-bootstrap/ui-bootstrap-tpls.min.js',
+          'angular-ui-tinymce/src/tinymce.js',
+
+          'tinymce-dist/tinymce.min.js',
+          'tinymce-dist/themes/*',
+          'tinymce-dist/skins/**/*',
+          'tinymce-dist/plugins/**/*',
+
+          'bootstrap/dist/css/bootstrap.min.css',
+          'bootstrap/dist/fonts/*'
+        ],
+        dest: '.tmp/public/dependencies'
+      }]
 		},
+    prod: {
+      files: [{
+        expand: true,
+        cwd: 'bower_components/bootstrap/dist',
+        src: ['fonts/*'],
+        dest: '.tmp/public/'
+      },{
+        expand: true,
+        cwd: 'bower_components/tinymce-dist',
+        src: ['themes/**/*','skins/**/*','plugins/**/*' ],
+        dest: '.tmp/public/min'
+      }]
+    },
 		build: {
 			files: [{
 				expand: true,

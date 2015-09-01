@@ -15,7 +15,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/dependencies/bootstrap.min.css',
+  'dependencies/bootstrap/dist/css/bootstrap.min.css',
   'styles/**/*.css'
 ];
 
@@ -26,23 +26,24 @@ var jsFilesToInject = [
 
   'js/app/services/Constants.js',
   // Load sails.io before everything else
-  'js/dependencies/sails.io.js/dist/sails.io.js',
+  'dependencies/sails.io.js/dist/sails.io.js',
 
 
   // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/jquery/dist/jquery.js',
-  'js/dependencies/angular/angular.js',
-  'js/dependencies/angular-ui-router/release/angular-ui-router.js',
-  'js/dependencies/angular-sails/dist/angular-sails.js',
-  'js/dependencies/ngmap/build/scripts/ng-map.js',
-  'js/dependencies/angular-bootstrap/ui-bootstrap-tpls.js',
+  'dependencies/jquery/dist/jquery.min.js',
+  'dependencies/angular/angular.min.js',
+  'dependencies/angular-ui-router/release/angular-ui-router.min.js',
+  'dependencies/angular-sails/dist/angular-sails.min.js',
+  'dependencies/ngmap/build/scripts/ng-map.min.js',
+  'dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js',
 
-  'js/dependencies/tinymce-dist/tinymce.min.js',
-  'js/dependencies/angular-ui-tinymce/src/tinymce.js',
+  'dependencies/tinymce-dist/tinymce.min.js',
+  'dependencies/angular-ui-tinymce/src/tinymce.js',
 
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
+  'js/**/config/config.js',
   'js/**/controllers/app.js',
   'js/**/models/*.js',
   'js/**/controllers/*.js'
