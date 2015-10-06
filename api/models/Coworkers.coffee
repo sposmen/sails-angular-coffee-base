@@ -6,7 +6,7 @@
 module.exports =
 
   migrate: 'alter'
-  connection: 'localDiskDb'
+  connection: 'mongoServer'
 
   attributes:
     email:

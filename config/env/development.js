@@ -16,7 +16,8 @@ module.exports = {
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
-
+  port: process.env.OPENSHIFT_NODEJS_PORT || 8080,
+  host: process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
   // models: {
   //   connection: 'someMongodbServer'
   // }
