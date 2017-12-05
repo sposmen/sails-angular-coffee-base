@@ -35,10 +35,10 @@ module.exports = function(grunt) {
           'angular-bootstrap/ui-bootstrap-tpls.min.js',
           'angular-ui-tinymce/src/tinymce.js',
 
-          'tinymce-dist/tinymce.min.js',
-          'tinymce-dist/themes/**/*',
-          'tinymce-dist/skins/**/*',
-          'tinymce-dist/plugins/**/*',
+          'tinymce/tinymce.min.js',
+          'tinymce/themes/**/*',
+          'tinymce/skins/**/*',
+          'tinymce/plugins/**/*',
 
           'bootstrap/dist/css/bootstrap.min.css',
           'bootstrap/dist/fonts/*'

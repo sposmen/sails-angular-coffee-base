@@ -23,6 +23,7 @@
     "angular-ui-tinymce": "~0.0.9",
     "bootstrap": "~3.3.5",
     "angular-bootstrap": "~0.13.3",
-    "angular-sails": "~1.1.4"
+    "angular-sails": "~1.1.4",
+    "tinymce": "tinymce-dist#^4.5.8"
   }
 }

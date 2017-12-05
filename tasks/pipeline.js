@@ -37,7 +37,7 @@ var jsFilesToInject = [
   'dependencies/ngmap/build/scripts/ng-map.min.js',
   'dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js',
 
-  'dependencies/tinymce-dist/tinymce.min.js',
+  'dependencies/tinymce/tinymce.min.js',
   'dependencies/angular-ui-tinymce/src/tinymce.js',
 
 
